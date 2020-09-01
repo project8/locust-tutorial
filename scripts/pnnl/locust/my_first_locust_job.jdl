@@ -1,0 +1,14 @@
+JobName = "my_first_locust_job";
+Executable = "my_first_locust_job.sh";
+Arguments = "LocustTestSignal.json";
+
+StdOutput = "std.out";
+StdError = "std.err";
+
+InputSandbox = {"my_first_locust_job.sh", "LocustTestSignal.json"};
+InputData = {""};
+
+OutputSandbox = {"std.out", "std.err", "*.egg"};
+OutputData = {""};
+OutputSE = "PNNL-PIC-SRM-SE";
+

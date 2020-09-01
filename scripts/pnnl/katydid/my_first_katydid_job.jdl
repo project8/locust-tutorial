@@ -1,0 +1,14 @@
+JobName = "my_first_katydid_job";
+Executable = "my_first_katydid_job.sh";
+Arguments = "katydid.json locust_mc_testSignal.egg basic.root spectrogram.root";
+
+StdOutput = "std.out";
+StdError = "std.err";
+
+InputSandbox = {"my_first_katydid_job.sh", "katydid.json", "locust_mc_testSignal.egg"};
+InputData = {""};
+
+OutputSandbox = {"std.out", "std.err", "*.root"};
+OutputData = {"*.root", "*.h5"};
+OutputSE = "PNNL-PIC-SRM-SE";
+
