@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH -J locustsingularity
+#SBATCH -o locustsingularity.out
+#SBATCH -e locustsingularity.err
+#SBATCH -p day
+#SBATCH -t 02:30:00
+#SBATCH -N 1
+#SBATCH -c 2
+#SBATCH --mem-per-cpu=7500
+
+hexbugdir=/home/ps48/project # local (configured by user)
+sifdir=/home/ps48/project/singularity_p8compute # local location of sif file.
+outputdir=/home/ps48/project/data/Simulation/Phase3 # local (configured by user)
+version=v2.1.2 # locust version
+p8computeversion=v0.10.1 # p8compute version 
+locustdir=/usr/local/p8/locust/${version}  # in container.
+p8computedir=/usr/local/p8/compute/${p8computeversion} # in container.
+
+echo '#!/bin/bash' > locustcommands.sh
+echo source ${locustdir}/bin/kasperenv.sh >> locustcommands.sh
+echo source ${p8computedir}/setup.sh >> locustcommands.sh
+
+# Select or enter Locust commands here:
+echo ${locustdir}/bin/LocustSim config=${hexbugdir}/hexbug/Phase3/LocustPhase3Template.json >> locustcommands.sh
+
+chmod +x locustcommands.sh
+
+# Singularity command line options
+singularity exec --no-home --bind ${hexbugdir}:/tmp,${outputdir}:${locustdir}/output ${sifdir}/p8compute_latest.sif ./locustcommands.sh
+
