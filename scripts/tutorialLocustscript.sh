@@ -15,7 +15,7 @@ echo source ${p8locustdir}/bin/kasperenv.sh >> ${scriptsdir}/locustcommands.sh
 # Enter (or uncomment) one Locust command below, with format "LocustSim config=/path/to/config.json"
 
 # Example 1:
-#echo LocustSim config=${p8locustdir}/config/LocustTestSignal.json >> ${scriptsdir}/locustcommands.sh
+echo LocustSim config=${p8locustdir}/config/LocustTestSignal.json >> ${scriptsdir}/locustcommands.sh
 
 # Example 2:
 #echo LocustSim config=${p8locustdir}/config/LocustPlaneWaveTemplate.json >> ${scriptsdir}/locustcommands.sh
@@ -30,7 +30,7 @@ echo source ${p8locustdir}/bin/kasperenv.sh >> ${scriptsdir}/locustcommands.sh
 #echo LMCKassiopeia ${p8locustdir}/config/JustKassFieldMap.xml >> ${scriptsdir}/locustcommands.sh
 
 #Example 6:
-echo LocustSim config=${p8hexbugdir}/Phase3/LocustPhase3Template.json >> ${scriptsdir}/locustcommands.sh
+#echo LocustSim config=${p8hexbugdir}/Phase3/LocustPhase3Template.json >> ${scriptsdir}/locustcommands.sh
 
 # End Locust commands.
 
