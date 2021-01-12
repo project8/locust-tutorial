@@ -23,9 +23,9 @@ echo cd ${p8computedir} >> katydidcommands.sh
 echo source setup.sh >> katydidcommands.sh
 
 # Select or enter Katydid commands below:
-echo Katydid -c ${locustdir}/config/katydid.json -e ${outputdir}/locust_mc.egg --brw-file ${outputdir}/basic.root --rsw-file ${outputdir}/spectrogram.root >> katydidcommands.sh
+echo exec Katydid -c ${locustdir}/config/katydid.json -e ${outputdir}/locust_mc.egg --brw-file ${outputdir}/basic.root --rsw-file ${outputdir}/spectrogram.root >> katydidcommands.sh
 
-#echo Katydid -c ${katydiddir}/config/ChannelAggregatorConfig.yaml -e ${outputdir}/locust_mc.egg --ch-sum.grid-size=7 -n 3 --brw-file ${scratchdir}/agg_basic.root --rsw-file ${scratchdir}/agg_spectrogram.root >> katydidcommands.sh
+#echo exec Katydid -c ${katydiddir}/config/ChannelAggregatorConfig.yaml -e ${outputdir}/locust_mc.egg --ch-sum.grid-size=7 -n 3 --brw-file ${scratchdir}/agg_basic.root --rsw-file ${scratchdir}/agg_spectrogram.root >> katydidcommands.sh
 
  
 chmod +x katydidcommands.sh

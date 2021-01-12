@@ -21,7 +21,7 @@ echo source ${locustdir}/bin/kasperenv.sh >> locustcommands.sh
 echo source ${p8computedir}/setup.sh >> locustcommands.sh
 
 # Select or enter Locust commands here:
-echo ${locustdir}/bin/LocustSim config=${hexbugdir}/hexbug/Phase3/LocustPhase3Template.json >> locustcommands.sh
+echo exec ${locustdir}/bin/LocustSim config=${hexbugdir}/hexbug/Phase3/LocustPhase3Template.json >> locustcommands.sh
 
 chmod +x locustcommands.sh
 
