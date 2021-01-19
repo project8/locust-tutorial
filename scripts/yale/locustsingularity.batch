@@ -16,7 +16,6 @@ p8computeversion=v0.10.1 # p8compute version
 locustdir=/usr/local/p8/locust/${version}  # in container.
 p8computedir=/usr/local/p8/compute/${p8computeversion} # in container.
 
-echo '#!/bin/bash' > locustcommands.sh
 echo source ${locustdir}/bin/kasperenv.sh >> locustcommands.sh
 echo source ${p8computedir}/setup.sh >> locustcommands.sh
 

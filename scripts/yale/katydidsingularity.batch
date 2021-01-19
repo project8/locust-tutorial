@@ -18,7 +18,6 @@ katydiddir=/usr/local/p8/katydid/${katydidversion}  # in container.
 locustdir=/usr/local/p8/locust/${locustversion} # in container
 p8computedir=/usr/local/p8/compute/${p8computeversion} # in container.
 
-echo '#!/bin/bash' > katydidcommands.sh
 echo cd ${p8computedir} >> katydidcommands.sh
 echo source setup.sh >> katydidcommands.sh
 
