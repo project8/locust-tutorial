@@ -2,8 +2,8 @@
 
 
 katydidversion=v2.18.0 # katydid version
-locustversion=v2.1.2 # locust version available in p8compute.
-p8computeversion=v0.10.1 # p8compute version 
+locustversion=v2.2.0 # locust version available in p8compute.
+p8computeversion=v0.10.2 # p8compute version 
 katydiddir=/usr/local/p8/katydid/${katydidversion}  # in container.
 locustdir=/usr/local/p8/locust/${locustversion} # in container
 p8computedir=/usr/local/p8/compute/${p8computeversion} # in container.

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 p8hexbugdir=/tmp/hexbug # in container, bound to ~/p8tutorial/hexbug locally.
-locustversion=v2.1.2 # locust version
-p8computeversion=v0.10.1 # p8compute version 
+locustversion=v2.2.0 # locust version
+p8computeversion=v0.10.2 # p8compute version 
 p8locustdir=/usr/local/p8/locust/${locustversion}  # in container.
 p8computedir=/usr/local/p8/compute/${p8computeversion} # in container.
 scriptsdir=~/p8tutorial/locust-tutorial/scripts # local scripts directory
