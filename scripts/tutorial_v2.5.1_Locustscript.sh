@@ -24,7 +24,7 @@ echo source ${kassiopeiadir}/bin/kasperenv.sh >> ${tutorialdir}/locust-tutorial/
 #echo LocustSim config=${p8locustdir}/config/LocustTestSignal.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Example 1:  Test signal plus noise.
-echo LocustSim config=${p8locustdir}/config/LocustSignalPlusNoise.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#echo LocustSim config=${p8locustdir}/config/LocustSignalPlusNoise.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Example 2:  25.9 GHz cavity (CCA)
 #echo LocustSim config=${p8locustdir}/config/LocustCavityCCA.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
@@ -37,6 +37,9 @@ echo LocustSim config=${p8locustdir}/config/LocustSignalPlusNoise.json >> ${tuto
 
 # Example 5:  Generate B field lines in Kassiopeia.
 #echo LMCKassiopeia ${p8locustdir}/config/JustKassFieldMap.xml >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+
+# Example 5A: (To be run only after generating output/JustKassMyNewFieldMap.xml file):
+#echo LMCKassiopeia ${p8locustdir}/output/JustKassMyNewFieldMap.xml >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # End Locust commands.
 
