@@ -38,8 +38,6 @@ echo source ${kassiopeiadir}/bin/kasperenv.sh >> ${tutorialdir}/locust-tutorial/
 # Example 5:  Generate B field lines in Kassiopeia.
 #echo LMCKassiopeia ${p8locustdir}/config/JustKassFieldMap.xml >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
-# Example 6:  Generate intermediate plots to check an FIR configuration.
-#echo LocustSim -c ${p8locustdir}/config/LocustCavity1GHz.json \"cavity-signal.print-fir-debug\"=true >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # End Locust commands.
 
