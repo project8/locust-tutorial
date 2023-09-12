@@ -21,22 +21,25 @@ echo source ${kassiopeiadir}/bin/kasperenv.sh >> ${tutorialdir}/locust-tutorial/
 # Enter (or just uncomment) one Locust command below, with format "LocustSim config=/path/to/config.json"
 
 # Example 0:  Test signal.
-#echo LocustSim config=${p8locustdir}/config/LocustTestSignal.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#echo LocustSim -c ${p8locustdir}/config/LocustTestSignal.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Example 1:  Test signal plus noise.
-#echo LocustSim config=${p8locustdir}/config/LocustSignalPlusNoise.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#echo LocustSim -c ${p8locustdir}/config/LocustSignalPlusNoise.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Example 2:  25.9 GHz cavity (CCA)
-#echo LocustSim config=${p8locustdir}/config/LocustCavityCCA.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#echo LocustSim -c ${p8locustdir}/config/LocustCavityCCA.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Example 3:  WR42 waveguide
-#echo LocustSim config=${p8locustdir}/config/LocustWaveguideTemplate.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#echo LocustSim -c ${p8locustdir}/config/LocustWaveguideTemplate.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Example 4:  LW free space example
-#echo LocustSim config=${p8locustdir}/config/LocustFreeSpaceTemplate.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#echo LocustSim -c ${p8locustdir}/config/LocustFreeSpaceTemplate.json >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Example 5:  Generate B field lines in Kassiopeia.
 #echo LMCKassiopeia ${p8locustdir}/config/JustKassFieldMap.xml >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+
+# Example 6:  Generate intermediate plots to check an FIR configuration.
+#echo LocustSim -c ${p8locustdir}/config/LocustCavity1GHz.json \"cavity-signal.print-fir-debug\"=true >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # End Locust commands.
 
