@@ -41,10 +41,23 @@ echo source ${kassiopeiadir}/bin/kasperenv.sh >> ${tutorialdir}/locust-tutorial/
 # Example 5A: (To be run only after generating output/JustKassMyNewFieldMap.xml file):
 #echo LMCKassiopeia ${p8locustdir}/output/JustKassMyNewFieldMap.xml >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
+# Example 6:  Generate a plot of an imported waveguide complex impedance and derived FIR
+#echo LocustSim -c ${p8locustdir}/config/LocustWaveguideTemplate.json \"cavity-signal.print-fir-debug\"=true >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+
+# Example 7:  Generate a plot of an analytic cavity Green's function
+#echo LocustSim -c ${p8locustdir}/config/LocustCavity1GHz.json \"cavity-signal.print-fir-debug\"=true >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+
+# Example 8:  Generate a mode map
+#echo LocustSim -c ${p8locustdir}/config/LocustWaveguideTemplate.json \"cavity-signal.plot-mode-maps\"=true \"cavity-signal.n-modes\"=3 >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+
 # End Locust commands.
+
+
+
 
 chmod +x ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Start the container, mount the shared directory(ies), and execute the Locust commands:
 docker run -it --rm -v ${tutorialdir}:/tmp -v ${tutorialdir}/locust-tutorial/output:${p8locustdir}/output ghcr.io/project8/locust_mc:${locusttag} /bin/bash -c /tmp/locust-tutorial/scripts/locustcommands.sh
+
 
