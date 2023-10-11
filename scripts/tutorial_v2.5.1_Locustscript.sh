@@ -5,18 +5,20 @@ tutorialdir=~/p8tutorial # path to locust-tutorial directory on local machine.
 #############################################
 
 p8hexbugdir=/tmp/hexbug # in container, bound to ${tutorialdir}/hexbug locally.
-locustversion=current # locust version
+locustversion=v2.5.3 # locust version
 locusttag=latest
 p8locustdir=/usr/local/p8/locust/${locustversion}  # in container
 kassiopeiadir=/usr/local/p8/kassiopeia/current
 commondir=/usr/local/p8/common/${commonversion} # in container.
-
+computedir=/usr/local/p8/compute/v1.1.0 # in container
 
 
 # Generate new command script:
 echo '#!/bin/bash' > ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 echo source ${p8locustdir}/setup.sh >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
-echo source ${kassiopeiadir}/bin/kasperenv.sh >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#echo source ${kassiopeiadir}/bin/kasperenv.sh >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#echo source ${computedir}/setup.sh >> ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+
 
 # Enter (or just uncomment) one Locust command below, with format "LocustSim config=/path/to/config.json"
 
@@ -58,6 +60,6 @@ echo source ${kassiopeiadir}/bin/kasperenv.sh >> ${tutorialdir}/locust-tutorial/
 chmod +x ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Start the container, mount the shared directory(ies), and execute the Locust commands:
-docker run -it --rm -v ${tutorialdir}:/tmp -v ${tutorialdir}/locust-tutorial/output:${p8locustdir}/output ghcr.io/project8/locust_mc:${locusttag} /bin/bash -c /tmp/locust-tutorial/scripts/locustcommands.sh
+docker run -it --rm -v ${tutorialdir}:/tmp -v ${tutorialdir}/locust-tutorial/output:${p8locustdir}/output ghcr.io/project8/luna:latest /bin/bash -c /tmp/locust-tutorial/scripts/locustcommands.sh
 
 
