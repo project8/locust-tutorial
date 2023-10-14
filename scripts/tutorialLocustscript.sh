@@ -11,7 +11,7 @@ p8locustdir=/usr/local/p8/locust/${locustversion}  # in container
 kassiopeiadir=/usr/local/p8/kassiopeia/current
 commondir=/usr/local/p8/common/${commonversion} # in container.
 
-
+echo This script has been deprecated.  Please see the new script tutorial_v2.5.1_Locustscript.sh .
 
 # Generate new command script:
 echo '#!/bin/bash' > ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
@@ -41,8 +41,8 @@ echo source ${kassiopeiadir}/bin/kasperenv.sh >> ${tutorialdir}/locust-tutorial/
 
 # End Locust commands.
 
-chmod +x ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
+#chmod +x ${tutorialdir}/locust-tutorial/scripts/locustcommands.sh
 
 # Start the container, mount the shared directory(ies), and execute the Locust commands:
-docker run -it --rm -v ${tutorialdir}:/tmp -v ${tutorialdir}/locust-tutorial/output:${p8locustdir}/output ghcr.io/project8/locust_mc:${locusttag} /bin/bash -c /tmp/locust-tutorial/scripts/locustcommands.sh
+#docker run -it --rm -v ${tutorialdir}:/tmp -v ${tutorialdir}/locust-tutorial/output:${p8locustdir}/output ghcr.io/project8/locust_mc:${locusttag} /bin/bash -c /tmp/locust-tutorial/scripts/locustcommands.sh
 

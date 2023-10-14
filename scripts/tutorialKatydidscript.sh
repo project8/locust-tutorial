@@ -1,8 +1,8 @@
 #!/bin/sh
 
 katydidversion=current # katydid version
-p8computeversion=v1.1.0 # p8compute version 
-locustversion=v2.5.3
+p8computeversion=v1.1.1 # p8compute version 
+locustversion=v2.5.4
 katydiddir=/usr/local/p8/katydid/${katydidversion}  # in container.
 locustdir=/usr/local/p8/locust/${locustversion} # in container
 p8computedir=/usr/local/p8/compute/${p8computeversion} # in container.
